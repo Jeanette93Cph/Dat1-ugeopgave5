@@ -1,0 +1,32 @@
+@startuml
+
+class Main
+class Car
+class Driver
+
+Main : + static void main()
+Main : + Driver driver1;
+Main : + Car car1;
+
+Car :  + String make;
+Car :  + String model;
+Car :  + int year;
+Car :  + String bodyStyle;
+Car :  + Driver driver;
+Car :  + Car(String make, String model, int year, String bodyStyle)
+Car :  + Driver getDriver()
+Car :  + void setDriver(Driver driver)
+Car :  + String toString()
+
+Driver : + String name;
+Driver : + int age;
+Driver : + Driver(String name, int age)
+Driver : + String toString()
+
+
+Main *--Car : has-a
+Main *--Driver : has-a
+
+
+
+@enduml
